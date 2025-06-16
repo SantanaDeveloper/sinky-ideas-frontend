@@ -203,11 +203,11 @@ export function CreateIdeaForm({ onIdeaCreated }: CreateIdeaFormProps) {
 Exemplo: 'App de delivery sustentável que conecta restaurantes locais com foco em embalagens biodegradáveis e entregas de bicicleta, reduzindo o impacto ambiental e promovendo a economia local.'"
                     required
                     disabled={isLoading}
-                    maxLength={500}
+                    maxLength={255}
                     className="min-h-[200px] border-2 border-slate-200 dark:border-slate-700 resize-none text-lg placeholder:text-slate-400 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:border-blue-500 bg-slate-50 dark:bg-slate-800 rounded-xl p-4"
                   />
                   <div className="absolute bottom-3 right-3 text-sm text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-800 px-2 py-1 rounded-md">
-                    {title.length}/500
+                    {title.length}255
                   </div>
                 </div>
               </div>
