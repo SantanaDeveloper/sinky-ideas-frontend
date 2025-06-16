@@ -206,18 +206,10 @@ export function IdeaCard({ idea, onIdeaUpdate }: IdeaCardProps) {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="w-48">
                   {(isOwner || isAdmin) && <EditIdeaDialog idea={idea} onIdeaUpdated={onIdeaUpdate} />}
-                  {isAdmin && !isOwner && (
-                    <div className="px-2 py-1 text-xs text-orange-600 dark:text-orange-400 border-b border-slate-200 dark:border-slate-700">
-                      Ação de Administrador
-                    </div>
-                  )}
+                 
                   {(isOwner || isAdmin) && (
                     <>
-                      {isAdmin && !isOwner && (
-                        <div className="px-2 py-1 text-xs text-orange-600 dark:text-orange-400 border-b border-slate-200 dark:border-slate-700">
-                          Ação de Administrador
-                        </div>
-                      )}
+                      
                       <DropdownMenuItem onClick={handleDelete} className="text-destructive" disabled={isDeleting}>
                         <Trash2 className="h-4 w-4 mr-2" />
                         {isDeleting ? "Excluindo..." : isAdmin && !isOwner ? "Excluir Ideia" : "Excluir Ideia"}
